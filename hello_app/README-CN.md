@@ -51,24 +51,25 @@ bundle install
 ### rails app 目录一览
 hello_app/.
 
-app/         : web 应用核心代码 (models, views, controller, helpers)
-app/assets   : web 应用的资源文件 (CSS, image)
-bin/         : 二进制可执行文件
-config/      : web 应用的配置文件
-db/          : 数据库文件
-doc/         : web 应用的描述文档
-lib/         : 模块？
-log/         : web 应用运行日志 
-public/      : web 应用对浏览器(无条件)公开的数据，如 错误页面
-bin/rails    : rails 程序，generate(代码生成器)，console(控制台), server(本地运行该web应用服务)
-test/        : 测试
-tmp/         : 临时文件
-Gemfile      : web 应用依赖关系描述
-Gemfile.lock : 依赖的版本信息
+| app/         | : web 应用核心代码 (models, views, controller, helpers)                            |
+| app/assets   | : web 应用的资源文件 (CSS, image)                                                  |
+| bin/         | : 二进制可执行文件                                                                 |
+| config/      | : web 应用的配置文件                                                               |
+| db/          | : 数据库文件                                                                       |
+| doc/         | : web 应用的描述文档                                                               |
+| lib/         | : 模块？                                                                           |
+| log/         | : web 应用运行日志                                                                 |
+| public/      | : web 应用对浏览器(无条件)公开的数据，如 错误页面                                  |
+| bin/rails    | : rails 程序，generate(代码生成器)，console(控制台), server(本地运行该web应用服务) |
+| test/        | : 测试                                                                             |
+| tmp/         | : 临时文件                                                                         |
+| Gemfile      | : web 应用依赖关系描述                                                             |
+| Gemfile.lock | : 依赖的版本信息                                                                   |
+
 
 ### 名词解释
-ruby: 一种编程语言，红宝石
-gem, RubyGems: ruby 的包管理器
-ruby on rails, rails: 用 ruby 编写的 web 应用框架 (A web-app framework) 
-framework: 架构，框架，脚手架。比较抽象宽泛的概念，笔者暂时无法给出精确定义 
-bundle, bundler: 打包, 打包器, `bundle install`, `bundle exec`, [为 Ruby 项目提供一致的运行环境](https://www.bundler.cn/)
+| ruby                 | : 一种编程语言，红宝石                                                                                     |
+| gem, RubyGems        | : ruby 的包管理器                                                                                          |
+| ruby on rails, rails | : 用 ruby 编写的 web 应用框架 (A web-app framework)                                                        |
+| framework            | : 架构，框架，脚手架。比较抽象宽泛的概念，笔者暂时无法给出精确定义                                         |
+| bundle, bundler      | : 打包, 打包器, `bundle install`, `bundle exec`, [为 Ruby 项目提供一致的运行环境](https://www.bundler.cn/) |
