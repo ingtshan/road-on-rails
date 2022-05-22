@@ -47,6 +47,25 @@ cd hello_app
 bundle update
 bundle install
 ```
+运行 web 应用
+```shell
+bundle exec bin/rails server
+```
+
+MVC 结构模式 运用在 rails 上
+| MVC        | Rails                                                                                       |
+|:-----------|:--------------------------------------------------------------------------------------------|
+| models     | Ruby object  (数据模型的实现，同时负责数据库的操作) 如 rails ActiveRecord 类                |
+| views      | template of html (生成发送给浏览器到 HTML 代码)                                             |
+| controller | Ruby object (控制器，负责处理服务器接收到请求，如 决定后台做什么业务处理，返回什么样的页面) |
+
+简单的网站运行过程
+
+浏览器==(请求)==>服务器->控制器->视图
+浏览器<==(响应)==服务器<-(html)-视图
+
+浏览器==(请求)==>服务器->控制器->模型->数据库->模型->控制器->视图
+浏览器<==(响应)==服务器<-(html)-视图
 
 ### rails app 目录一览
 hello_app/.
@@ -69,10 +88,20 @@ hello_app/.
 | Gemfile.lock | : 依赖的版本信息                                                                   |
 
 ### 名词解释
-| 名词                 | 解释                                                                                                       |
-|:---------------------|:-----------------------------------------------------------------------------------------------------------|
-| ruby                 | : 一种编程语言，红宝石                                                                                     |
-| gem, RubyGems        | : ruby 的包管理器                                                                                          |
-| ruby on rails, rails | : 用 ruby 编写的 web 应用框架 (A web-app framework)                                                        |
-| framework            | : 架构，框架，脚手架。比较抽象宽泛的概念，笔者暂时无法给出精确定义                                         |
-| bundle, bundler      | : 打包, 打包器, `bundle install`, `bundle exec`, [为 Ruby 项目提供一致的运行环境](https://www.bundler.cn/) |
+| 名词                     | 解释                                                                                                       |
+|:-------------------------|:-----------------------------------------------------------------------------------------------------------|
+| ruby                     | : 一种编程语言，红宝石                                                                                     |
+| gem, RubyGems            | : ruby 的包管理器                                                                                          |
+| ruby on rails, rails     | : 用 ruby 编写的 web 应用框架 (A web-app framework)                                                        |
+| framework                | : 架构，框架，脚手架。比较抽象宽泛的概念，笔者暂时无法给出精确定义                                         |
+| bundle, bundler          | : 打包, 打包器, `bundle install`, `bundle exec`, [为 Ruby 项目提供一致的运行环境](https://www.bundler.cn/) |
+| puma                     | : https://github.com/puma/puma                                                                             |
+| MVC architecture pattern |                                                                                                            |
+| models                   |                                                                                                            |
+| views                    |                                                                                                            |
+| controllers              |                                                                                                            |
+| actions                  |                                                                                                            |
+| dynamic sites            | : 动态网站                                                                                                 |
+| request                  | : 请求                                                                                                     |
+| respone                  | : 响应                                                                                                     |
+| browser                  | : 浏览器                                                                                                   |
