@@ -135,9 +135,9 @@ bundle exec
 rains server
 ```
 
-体会到 rails 利用命名规范自动化处理了某些事情
+体会到 rails 利用命名规范猜测我们的意图自动化处理了某些事情
 
-比如 router.rb 里 `application#hello` 可以找到 `application_controller.rb` 里 `ApplicationController` 的 `hello` 方法
+比如 router.rb 里 `application#hello` (只写核心信息) 可以找到 `application_controller.rb` 里 `ApplicationController` 的 `hello` 方法
 
 命名的策略有
 - ruby 文件名：下划线小写命名，underline_case
