@@ -59,13 +59,34 @@ MVC 结构模式 运用在 rails 上
 | views      | template of html (生成发送给浏览器到 HTML 代码)                                             |
 | controller | Ruby object (控制器，负责处理服务器接收到请求，如 决定后台做什么业务处理，返回什么样的页面) |
 
-简单的网站运行过程
+简单的网站运行过程(rails app 层面)
 
 浏览器==(请求)==>服务器->控制器->视图
 浏览器<==(响应)==服务器<-(html)-视图
 
 浏览器==(请求)==>服务器->控制器->模型->数据库->模型->控制器->视图
 浏览器<==(响应)==服务器<-(html)-视图
+
+Hello, world! 的过程
+browser visit http://localhost:3000 -> Server -(by router)-> ApplicationController -> #hello action/method -> run your ruby code
+浏览器访问 http://localhost:3000 -> 服务器 -(路由)-> 对应的控制器 -> #hello 动作/方法 -> 运行ruby代码片段 
+
+```ruby
+控制器文件名 (命名规则：下划线命名/underline_case/蛇形命名法/snake_case)
+# in app/controller/application_controller.rb
+
+# 控制器类名 (命名规则: 帕斯卡命名/PascalCase/大驼峰命名/BigCamelCase)
+class ApplicationController < ActionController::Base
+  def hello
+    render html: 'Hello, world!'
+  end
+end
+
+# in config/router.rb
+Rails.application.routes.draw do
+  root 'application#hello' # rails 结构 控制器名称#动作名 name_of_controller#name_of_action
+end
+```
 
 ### rails app 目录一览
 hello_app/.
@@ -105,3 +126,8 @@ hello_app/.
 | request                  | : 请求                                                                                                     |
 | respone                  | : 响应                                                                                                     |
 | browser                  | : 浏览器                                                                                                   |
+| render                   | : 渲染，输入-(规则)->输出，的实际运算过程，而渲染过程输出的一般是“视觉”的材料                              |
+|                          | : 如 生成 HTML 的过程 (因为浏览器可以直接由 HTML 绘制出页面了)                                             |
+| router                   | : 路由, "路径"信息->路由表->找到资源 的过程                                                                |
+|                          |                                                                                                            |
+
